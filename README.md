@@ -1,19 +1,24 @@
 # LeetCode Solutions
 My Java solutions to LeetCode problems, solved as part of my ongoing DSA practice. Each solution follows LeetCode's required method signature and is organized by problem number for easy reference. Where relevant, notes on approach and time/space complexity are included.
 ## Structure
-- Each problem has its own folder: `NNNN-problem-name/`
+- Each solution is a standalone file: `NNNN-Problem-Name.java`
 - Solutions are written to be submission-ready for LeetCode's judge
 - Progress is tracked in the table below
 ## Progress
 | # | Title | Difficulty | Solution | Notes |
 |---|-------|-----------|----------|-------|
-| 1 | Two Sum | Easy | [Solution.java](./0001-two-sum/Solution.java) | Brute-force nested loop checks all pairs. O(n²) time, O(1) space. Faster O(n) approach possible using a HashMap. |
-| 9 | Palindrome Number | Easy | [Solution.java](./0009-palindrome-number/Solution.java) | Reverses the number by extracting digits and compares to original. Negative numbers return false. O(log n) time, O(1) space. |
-| 258 | Add Digits | Easy | [Solution.java](./0258-add-digits/Solution.java) | Repeatedly sum digits until single digit remains. O(log n) time, O(1) space. Bonus: digital root formula `1 + (num-1) % 9` for O(1). |
-| 709 | To Lower Case | Easy | [Solution.java](./0709-to-lower-case/Solution.java) | Uses built-in `toLowerCase()`. O(n) time, O(n) space. |
-| 2114 | Maximum Number of Words Found in Sentences | Easy | [Solution.java](./2114-maximum-number-of-words-found-in-sentences/Solution.java) | Split each sentence by spaces, track max word count. O(n) time, O(n) space (O(1) extra space possible via manual space-counting). |
+| 1 | Two Sum | Easy | [0001-Two-Sum.java](./0001-Two-Sum.java) | Brute-force nested loop checks all pairs. O(n²) time, O(1) space. Faster O(n) approach possible using a HashMap. |
+| 7 | Reverse Integer | Medium | [0007-Reverse-Integer.java](./0007-Reverse-Integer.java) | Extracts digits and rebuilds in reverse using a `long` to safely detect 32-bit overflow before casting back to `int`. Returns 0 on overflow. O(log n) time, O(1) space. |
+| 9 | Palindrome Number | Easy | [0009-Palindrome-Number.java](./0009-Palindrome-Number.java) | Reverses the number by extracting digits and compares to original. Negative numbers return false. O(log n) time, O(1) space. |
+| 258 | Add Digits | Easy | [0258-add-digits.java](./0258-add-digits.java) | Repeatedly sum digits until single digit remains. O(log n) time, O(1) space. Bonus: digital root formula `1 + (num-1) % 9` for O(1). |
+| 709 | To Lower Case | Easy | [0709-to-lower-case.java](./0709-to-lower-case.java) | Uses built-in `toLowerCase()`. O(n) time, O(n) space. |
+| 771 | Jewels and Stones | Easy | [0771-Jewals-and-Stones.java](./0771-Jewals-and-Stones.java) | Nested loop checks each jewel character against each stone character. O(n×m) time, O(1) space. Faster O(n+m) possible using a HashSet. |
+| 1281 | Subtract the Product and Sum of Digits of an Integer | Easy | [1281-subtract-product-and-sum-of-digits.java](./1281-subtract-product-and-sum-of-digits.java) | Extracts digits one at a time, tracking running product and sum, then returns the difference. O(log n) time, O(1) space. |
+| 2114 | Maximum Number of Words Found in Sentences | Easy | [2114-Maximum-Number-of-Words-Found-in-Sentences.java](./2114-Maximum-Number-of-Words-Found-in-Sentences.java) | Split each sentence by spaces, track max word count. O(n) time, O(n) space (O(1) extra space possible via manual space-counting). |
+| 2235 | Add Two Integers | Easy | [2235-Add-Two-Integers.java](./2235-Add-Two-Integers.java) | Simple sum of the two inputs. O(1) time, O(1) space. |
+| 2469 | Convert the Temperature | Easy | [2469-Convert-the-Tempreture.java](./2469-Convert-the-Tempreture.java) | Applies Kelvin and Fahrenheit conversion formulas, returns both in an array. O(1) time, O(1) space. |
 ## Stats
-- **Total solved:** 5
-- **Easy:** 5 | **Medium:** 0 | **Hard:** 0
+- **Total solved:** 10
+- **Easy:** 9 | **Medium:** 1 | **Hard:** 0
 ## License
 This repository is for personal practice and reference. Feel free to browse for inspiration, but try solving problems yourself first!
