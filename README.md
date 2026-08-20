@@ -24,11 +24,13 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 2114 | Maximum Number of Words Found in Sentences | Easy | [2114-Maximum-Number-of-Words-Found-in-Sentences.java](./2114-Maximum-Number-of-Words-Found-in-Sentences.java) | Split each sentence by spaces, track max word count. O(n) time, O(n) space (O(1) extra space possible via manual space-counting). |
 | 2235 | Add Two Integers | Easy | [2235-Add-Two-Integers.java](./2235-Add-Two-Integers.java) | Simple sum of the two inputs. O(1) time, O(1) space. |
 | 2469 | Convert the Temperature | Easy | [2469-Convert-the-Tempreture.java](./2469-Convert-the-Tempreture.java) | Applies Kelvin and Fahrenheit conversion formulas, returns both in an array. O(1) time, O(1) space. |
+| 2710 | Remove Trailing Zeros From a String | Easy | [2710-Remove-trailing-zeros-from-a-string.java](./2710-Remove-trailing-zeros-from-a-string.java) | Scans from the end of the string, decrementing an index while trailing `'0'` characters are found, then returns the substring up to that point. Avoids parsing to a numeric type to prevent overflow on large inputs. O(n) time, O(1) extra space. |
+| 3340 | Check Balanced String | Easy | [3340-Check-Balanced-String.java](./3340-Check-Balanced-String.java) | Sums digits at even indices and digits at odd indices separately, then checks if the two sums are equal. O(n) time, O(1) space. |
 | 3492 | Maximum Containers on a Ship | Easy | [3492-Maximum-Containers-on-a-Ship.java](./3492-Maximum-Containers-on-a-Ship.java) | Answer is bounded by the smaller of total deck slots (`n²`) and weight capacity (`maxWeight / w`). Uses `long` arithmetic to avoid overflow on `n * n`. O(1) time, O(1) space. |
 
 ## Stats
-- **Total solved:** 15
-- **Easy:** 13 | **Medium:** 2 | **Hard:** 0
+- **Total solved:** 17
+- **Easy:** 15 | **Medium:** 2 | **Hard:** 0
 
 ## License
 This repository is for personal practice and reference. Feel free to browse for inspiration, but try solving problems yourself first!
