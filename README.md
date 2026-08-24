@@ -13,6 +13,7 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 1 | Two Sum | Easy | [0001-Two-Sum.java](./0001-Two-Sum.java) | Brute-force nested loop checks all pairs. O(n²) time, O(1) space. Faster O(n) approach possible using a HashMap. |
 | 7 | Reverse Integer | Medium | [0007-Reverse-Integer.java](./0007-Reverse-Integer.java) | Extracts digits and rebuilds in reverse using a `long` to safely detect 32-bit overflow before casting back to `int`. Returns 0 on overflow. O(log n) time, O(1) space. |
 | 9 | Palindrome Number | Easy | [0009-Palindrome-Number.java](./0009-Palindrome-Number.java) | Reverses the number by extracting digits and compares to original. Negative numbers return false. O(log n) time, O(1) space. |
+| 151 | Reverse Words in a String | Medium | [0151-Reverse-Words-in-a-String.java](./0151-Reverse-Words-in-a-String.java) | Trims leading/trailing spaces, splits on `\s+` (one or more whitespace) to collapse internal multiple spaces, then reverses the word array with a two-pointer swap and rejoins with `String.join`. O(n) time, O(n) space. |
 | 167 | Two Sum II - Input Array Is Sorted | Medium | [0167-Two-Sum-II.java](./0167-Two-Sum-II.java) | Two-pointer approach: pointers start at both ends and move inward based on comparing the running sum to target. Returns 1-indexed positions. O(n) time, O(1) space. |
 | 258 | Add Digits | Easy | [0258-add-digits.java](./0258-add-digits.java) | Repeatedly sum digits until single digit remains. O(log n) time, O(1) space. Bonus: digital root formula `1 + (num-1) % 9` for O(1). |
 | 709 | To Lower Case | Easy | [0709-to-lower-case.java](./0709-to-lower-case.java) | Uses built-in `toLowerCase()`. O(n) time, O(n) space. |
@@ -31,8 +32,8 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 3492 | Maximum Containers on a Ship | Easy | [3492-Maximum-Containers-on-a-Ship.java](./3492-Maximum-Containers-on-a-Ship.java) | Answer is bounded by the smaller of total deck slots (`n²`) and weight capacity (`maxWeight / w`). Uses `long` arithmetic to avoid overflow on `n * n`. O(1) time, O(1) space. |
 
 ## Stats
-- **Total solved:** 19
-- **Easy:** 17 | **Medium:** 2 | **Hard:** 0
+- **Total solved:** 20
+- **Easy:** 17 | **Medium:** 3 | **Hard:** 0
 
 ## License
 This repository is for personal practice and reference. Feel free to browse for inspiration, but try solving problems yourself first!
