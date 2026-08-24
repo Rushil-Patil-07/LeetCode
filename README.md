@@ -28,12 +28,14 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 2427 | Number of Common Factors | Easy | [2427-Number-Of-Common-Factors.java](./2427-Number-Of-Common-Factors.java) | Loops from 1 to `min(a, b)` inclusive, counting values that divide both. O(min(a,b)) time, O(1) space. |
 | 2469 | Convert the Temperature | Easy | [2469-Convert-the-Tempreture.java](./2469-Convert-the-Tempreture.java) | Applies Kelvin and Fahrenheit conversion formulas, returns both in an array. O(1) time, O(1) space. |
 | 2710 | Remove Trailing Zeros From a String | Easy | [2710-Remove-trailing-zeros-from-a-string.java](./2710-Remove-trailing-zeros-from-a-string.java) | Scans from the end of the string, decrementing an index while trailing `'0'` characters are found, then returns the substring up to that point. Avoids parsing to a numeric type to prevent overflow on large inputs. O(n) time, O(1) extra space. |
+| 3110 | Score of a String | Easy | [3110-Score-of-a-String.java](./3110-Score-of-a-String.java) | Iterates adjacent character pairs and sums the absolute difference of their ASCII values. O(n) time, O(1) space. |
 | 3340 | Check Balanced String | Easy | [3340-Check-Balanced-String.java](./3340-Check-Balanced-String.java) | Sums digits at even indices and digits at odd indices separately, then checks if the two sums are equal. O(n) time, O(1) space. |
 | 3492 | Maximum Containers on a Ship | Easy | [3492-Maximum-Containers-on-a-Ship.java](./3492-Maximum-Containers-on-a-Ship.java) | Answer is bounded by the smaller of total deck slots (`n²`) and weight capacity (`maxWeight / w`). Uses `long` arithmetic to avoid overflow on `n * n`. O(1) time, O(1) space. |
+| 3925 | Concatenate Array With Reverse | Easy | [3925-Concatenate-Array-With-Reverse.java](./3925-Concatenate-Array-With-Reverse.java) | Builds a new array of length 2n: copies `nums` into the first half, and fills the second half with `nums` in reverse order using `ans[i+n] = nums[n-i-1]`. O(n) time, O(n) space. |
 
 ## Stats
-- **Total solved:** 20
-- **Easy:** 17 | **Medium:** 3 | **Hard:** 0
+- **Total solved:** 22
+- **Easy:** 19 | **Medium:** 3 | **Hard:** 0
 
 ## License
 This repository is for personal practice and reference. Feel free to browse for inspiration, but try solving problems yourself first!
