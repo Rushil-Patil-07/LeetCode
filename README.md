@@ -39,10 +39,11 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 3340 | Check Balanced String | Easy | [3340-Check-Balanced-String.java](./3340-Check-Balanced-String.java) | Sums digits at even indices and digits at odd indices separately, then checks if the two sums are equal. O(n) time, O(1) space. |
 | 3492 | Maximum Containers on a Ship | Easy | [3492-Maximum-Containers-on-a-ship.java](./3492-Maximum-Containers-on-a-ship.java) | Answer is bounded by the smaller of total deck slots (`n²`) and weight capacity (`maxWeight / w`). Uses `long` arithmetic to avoid overflow on `n * n`. O(1) time, O(1) space. |
 | 3516 | Find Closest Person | Easy | [3516-Find-Closest-Person.java](./3516-Find-Closest-Person.java) | Compares absolute distances from the friend's position to each person and returns whichever is closer, or 0 if tied. O(1) time, O(1) space. |
+| 3925 | Concatenate Array With Reverse | Easy | [3925-Concatenate-Array-With-Reverse.java](./3925-Concatenate-Array-With-Reverse.java) | Builds a new array of length 2n: copies `nums` into the first half, and fills the second half with `nums` in reverse order using `ans[i+n] = nums[n-i-1]`. O(n) time, O(n) space. |
 
 ## Stats
-- **Total solved:** 29
-- **Easy:** 25 | **Medium:** 4 | **Hard:** 0
+- **Total solved:** 30
+- **Easy:** 26 | **Medium:** 4 | **Hard:** 0
 
 ## License
 This repository is for personal practice and reference. Feel free to browse for inspiration, but try solving problems yourself first!
