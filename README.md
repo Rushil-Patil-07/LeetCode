@@ -13,6 +13,7 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 1 | Two Sum | Easy | [0001-Two-Sum.java](./0001-Two-Sum.java) | Brute-force nested loop checks all pairs. O(n²) time, O(1) space. Faster O(n) approach possible using a HashMap. |
 | 7 | Reverse Integer | Medium | [0007-Reverse-Integer.java](./0007-Reverse-Integer.java) | Extracts digits and rebuilds in reverse using a `long` to safely detect 32-bit overflow before casting back to `int`. Returns 0 on overflow. O(log n) time, O(1) space. |
 | 9 | Palindrome Number | Easy | [0009-Palindrome-Number.java](./0009-Palindrome-Number.java) | Reverses the number by extracting digits and compares to original. Negative numbers return false. O(log n) time, O(1) space. |
+| 26 | Remove Duplicates from Sorted Array | Easy | [0026-Remove-Duplicates-from-Sorted-Array.java](./0026-Remove-Duplicates-from-Sorted-Array.java) | Builds a list of unique values in a single pass, comparing each element to the next, then copies the unique values back into `nums` (only the first `k` elements need to be correct, per LeetCode's checker). O(n) time, O(n) extra space (ArrayList). A tighter O(1)-extra-space two-pointer approach is also possible. |
 | 27 | Remove Element | Easy | [0027-Remove-Element.java](./0027-Remove-Element.java) | TBD |
 | 66 | Plus One | Easy | [0066-Plus-One.java](./0066-Plus-One.java) | Adds one to the last digit and propagates the carry leftward through the array; if a carry remains after the leftmost digit, allocates a new array of size n+1 with a leading 1. O(n) time, O(n) space (output array). |
 | 151 | Reverse Words in a String | Medium | [0151-Reverse-Words-in-a-Sring.java](./0151-Reverse-Words-in-a-Sring.java) | Trims leading/trailing spaces, splits on `\s+` (one or more whitespace) to collapse internal multiple spaces, then reverses the word array with a two-pointer swap and rejoins with `String.join`. O(n) time, O(n) space. |
@@ -29,26 +30,34 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 896 | Monotonic Array | Easy | [0896-Monotonic-Array.java](./0896-Monotonic-Array.java) | Single pass tracking two flags (`isIncreasing`, `isDecreasing`); returns true if either stays true through the whole array. O(n) time, O(1) space. |
 | 1281 | Subtract the Product and Sum of Digits of an Integer | Easy | [1281-subtract-product-and-sum-of-digits.java](./1281-subtract-product-and-sum-of-digits.java) | Extracts digits one at a time, tracking running product and sum, then returns the difference. O(log n) time, O(1) space. |
 | 1431 | Kids With the Greatest Number of Candies | Easy | [1431-Kids-with-the-greatest-candies.java](./1431-Kids-with-the-greatest-candies.java) | Finds the max candy count, then checks whether each kid's candies plus extra candies would reach it. O(n) time, O(n) space (output list). |
+| 1470 | Shuffle the Array | Easy | [1470-Shufflr the Array.java](./1470-Shufflr%20the%20Array.java) | TBD |
 | 1480 | Running Sum of 1d Array | Easy | [1480-Running-Sum-of-1d-Array.java](./1480-Running-Sum-of-1d-Array.java) | Builds a prefix-sum array by adding each element to the running total from the previous index. O(n) time, O(n) space. |
 | 1662 | Check If Two String Arrays are Equivalent | Easy | [1662-Check-if-Two-String-Arrays-are-Equavalent.java](./1662-Check-if-Two-String-Arrays-are-Equavalent.java) | Concatenates each array into a single string using string concatenation, then compares with `.equals()`. O(n) time, O(n) space. |
+| 1672 | Richest Customer Wealth | Easy | [1672-Richest-Customer-Wealth.java](./1672-Richest-Customer-Wealth.java) | TBD |
 | 1678 | Goal Parser Interpretation | Easy | [1678-Goal-Parser-Interpretation.java](./1678-Goal-Parser-Interpretation.java) | TBD |
 | 1816 | Truncate Sentence | Easy | [1816-Truncate-Sentence.java](./1816-Truncate-Sentence.java) | Splits sentence by spaces, rebuilds first `k` words with a `StringBuilder`, then trims trailing whitespace. O(n) time, O(n) space. |
 | 1929 | Concatenation of Array | Easy | [1929-Concatenation-of-Array.java](./1929-Concatenation-of-Array.java) | Builds a new array of length 2n by copying `nums` into the first half and again into the second half (`ans[i] = ans[i+n] = nums[i]`). O(n) time, O(n) space. |
 | 2114 | Maximum Number of Words Found in Sentences | Easy | [2114-Maximum-Number-of-Words-Found-in-Sentences.java](./2114-Maximum-Number-of-Words-Found-in-Sentences.java) | Split each sentence by spaces, track max word count. O(n) time, O(n) space (O(1) extra space possible via manual space-counting). |
+| 2185 | Counting Words With a Given Prefix | Easy | [2185-Counting-Words-With-a-Given-Prefix.java](./2185-Counting-Words-With-a-Given-Prefix.java) | TBD |
 | 2235 | Add Two Integers | Easy | [2235-Add-Two-Integers.java](./2235-Add-Two-Integers.java) | Simple sum of the two inputs. O(1) time, O(1) space. |
 | 2427 | Number of Common Factors | Easy | [2427-Number-Of-Common-Factors.java](./2427-Number-Of-Common-Factors.java) | Loops from 1 to `min(a, b)` inclusive, counting values that divide both. O(min(a,b)) time, O(1) space. |
 | 2469 | Convert the Temperature | Easy | [2469-Convert-the-Tempreture.java](./2469-Convert-the-Tempreture.java) | Applies Kelvin and Fahrenheit conversion formulas, returns both in an array. O(1) time, O(1) space. |
 | 2710 | Remove Trailing Zeros From a String | Easy | [2710-Remove-trailing-zeros-from-a-string.java](./2710-Remove-trailing-zeros-from-a-string.java) | Scans from the end of the string, decrementing an index while trailing `'0'` characters are found, then returns the substring up to that point. Avoids parsing to a numeric type to prevent overflow on large inputs. O(n) time, O(1) extra space. |
+| 2798 | Number of Employees Who Met the Target | Easy | [2798-Number-of-Employees-Who-Met-the-Target.java](./2798-Number-of-Employees-Who-Met-the-Target.java) | TBD |
+| 2810 | Faulty Keyboard | Easy | [2810-Faulty-Keyboard.java](./2810-Faulty-Keyboard.java) | TBD |
 | 2828 | Check if String is a Prefix of Array | Easy | [2828-Check-if-String-is-an-Acronym.java](./2828-Check-if-String-is-an-Acronym.java) | Checks the string's length matches the word array's length, then compares each word's first character against the corresponding character in the string. O(n) time, O(1) space. |
 | 3110 | Score of a String | Easy | [3110-Score-of-a-String.java](./3110-Score-of-a-String.java) | Iterates adjacent character pairs and sums the absolute difference of their ASCII values. O(n) time, O(1) space. |
+| 3300 | Minimum Element After Replacement With Digit Sum | Easy | [3300-Minimum-Element-After-Replacement-With-Digit-Sum.java](./3300-Minimum-Element-After-Replacement-With-Digit-Sum.java) | TBD |
 | 3340 | Check Balanced String | Easy | [3340-Check-Balanced-String.java](./3340-Check-Balanced-String.java) | Sums digits at even indices and digits at odd indices separately, then checks if the two sums are equal. O(n) time, O(1) space. |
+| 3467 | Transform Array by Parity | Easy | [3467-Transfrm-Array-by-Parity.java](./3467-Transfrm-Array-by-Parity.java) | TBD |
 | 3492 | Maximum Containers on a Ship | Easy | [3492-Maximum-Containers-on-a-ship.java](./3492-Maximum-Containers-on-a-ship.java) | Answer is bounded by the smaller of total deck slots (`n²`) and weight capacity (`maxWeight / w`). Uses `long` arithmetic to avoid overflow on `n * n`. O(1) time, O(1) space. |
 | 3516 | Find Closest Person | Easy | [3516-Find-Closest-Person.java](./3516-Find-Closest-Person.java) | Compares absolute distances from the friend's position to each person and returns whichever is closer, or 0 if tied. O(1) time, O(1) space. |
+| 3701 | Compute Alternating Sum | Easy | [3701-Compute-Alternating-Sum.java](./3701-Compute-Alternating-Sum.java) | TBD |
 | 3925 | Concatenate Array With Reverse | Easy | [3925-Concat-Array-With-Reverse.java](./3925-Concat-Array-With-Reverse.java) | Builds a new array of length 2n: copies `nums` into the first half, and fills the second half with `nums` in reverse order using `ans[i+n] = nums[n-i-1]`. O(n) time, O(n) space. |
 
 ## Stats
-- **Total solved:** 35
-- **Easy:** 31 | **Medium:** 4 | **Hard:** 0
+- **Total solved:** 44
+- **Easy:** 40 | **Medium:** 4 | **Hard:** 0
 
 ## License
 This repository is for personal practice and reference. Feel free to browse for inspiration, but try solving problems yourself first!
