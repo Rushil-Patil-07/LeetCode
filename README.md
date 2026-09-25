@@ -18,6 +18,7 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 66 | Plus One | Easy | [0066-Plus-One.java](./0066-Plus-One.java) | Adds one to the last digit and propagates the carry leftward through the array; if a carry remains after the leftmost digit, allocates a new array of size n+1 with a leading 1. O(n) time, O(n) space (output array). |
 | 151 | Reverse Words in a String | Medium | [0151-Reverse-Words-in-a-Sring.java](./0151-Reverse-Words-in-a-Sring.java) | Trims leading/trailing spaces, splits on `\s+` (one or more whitespace) to collapse internal multiple spaces, then reverses the word array with a two-pointer swap and rejoins with `String.join`. O(n) time, O(n) space. |
 | 167 | Two Sum II - Input Array Is Sorted | Medium | [0167-Two-Sum-II.java](./0167-Two-Sum-II.java) | Two-pointer approach: pointers start at both ends and move inward based on comparing the running sum to target. Returns 1-indexed positions. O(n) time, O(1) space. |
+| 204 | Count Primes | Medium | [0204-Count-Primes.java](./0204-Count-Primes.java) | For each candidate `i` from 2 to n-1, tests divisibility by every `j` up to `√i`, breaking early on the first divisor found and incrementing a count when none divide evenly. O(n√n) time, O(1) extra space. Sieve of Eratosthenes (O(n log log n)) is faster for the largest constraints. |
 | 217 | Contains Duplicate | Easy | [0217-Contains-Duplicate.java](./0217-Contains-Duplicate.java) | TBD |
 | 258 | Add Digits | Easy | [0258-add-digits.java](./0258-add-digits.java) | Repeatedly sum digits until single digit remains. O(log n) time, O(1) space. Bonus: digital root formula `1 + (num-1) % 9` for O(1). |
 | 283 | Move Zeroes | Easy | [0283-Move-Zeroes.java](./0283-Move-Zeroes.java) | Nested loop swaps each zero with the next non-zero element found ahead of it, preserving relative order of non-zero elements. O(n²) time, O(1) space. Faster O(n) approach possible using a single-pass two-pointer/insert-position technique. |
@@ -35,17 +36,20 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 1662 | Check If Two String Arrays are Equivalent | Easy | [1662-Check-if-Two-String-Arrays-are-Equavalent.java](./1662-Check-if-Two-String-Arrays-are-Equavalent.java) | Concatenates each array into a single string using string concatenation, then compares with `.equals()`. O(n) time, O(n) space. |
 | 1672 | Richest Customer Wealth | Easy | [1672-Richest-Customer-Wealth.java](./1672-Richest-Customer-Wealth.java) | TBD |
 | 1678 | Goal Parser Interpretation | Easy | [1678-Goal-Parser-Interpretation.java](./1678-Goal-Parser-Interpretation.java) | TBD |
+| 1769 | Minimum Number of Operations to Move All Balls to Each Box | Medium | [1769-Minimum-Number-of-Operations-to-Move-All-Balls-to-Each-Box.java](./1769-Minimum-Number-of-Operations-to-Move-All-Balls-to-Each-Box.java) | Brute force: for each destination box `i`, sums the absolute distance `|i-j|` to every box `j` containing a ball. O(n²) time, O(n) space (output array). An O(n) two-pass prefix/suffix approach is also possible. |
 | 1816 | Truncate Sentence | Easy | [1816-Truncate-Sentence.java](./1816-Truncate-Sentence.java) | Splits sentence by spaces, rebuilds first `k` words with a `StringBuilder`, then trims trailing whitespace. O(n) time, O(n) space. |
 | 1929 | Concatenation of Array | Easy | [1929-Concatenation-of-Array.java](./1929-Concatenation-of-Array.java) | Builds a new array of length 2n by copying `nums` into the first half and again into the second half (`ans[i] = ans[i+n] = nums[i]`). O(n) time, O(n) space. |
 | 2114 | Maximum Number of Words Found in Sentences | Easy | [2114-Maximum-Number-of-Words-Found-in-Sentences.java](./2114-Maximum-Number-of-Words-Found-in-Sentences.java) | Split each sentence by spaces, track max word count. O(n) time, O(n) space (O(1) extra space possible via manual space-counting). |
 | 2185 | Counting Words With a Given Prefix | Easy | [2185-Counting-Words-With-a-Given-Prefix.java](./2185-Counting-Words-With-a-Given-Prefix.java) | TBD |
 | 2235 | Add Two Integers | Easy | [2235-Add-Two-Integers.java](./2235-Add-Two-Integers.java) | Simple sum of the two inputs. O(1) time, O(1) space. |
 | 2427 | Number of Common Factors | Easy | [2427-Number-Of-Common-Factors.java](./2427-Number-Of-Common-Factors.java) | Loops from 1 to `min(a, b)` inclusive, counting values that divide both. O(min(a,b)) time, O(1) space. |
+| 2433 | Find The Original Array of Prefix Xor | Medium | [2433-Find-The-Original-Array-of-Prefix-Xor.java](./2433-Find-The-Original-Array-of-Prefix-Xor.java) | Recovers the original array from a prefix-XOR array: the first element equals `pref[0]`, and each subsequent element is `pref[i] ^ pref[i-1]` (XORing with the prior prefix cancels out everything but the new term). O(n) time, O(n) space. |
 | 2469 | Convert the Temperature | Easy | [2469-Convert-the-Tempreture.java](./2469-Convert-the-Tempreture.java) | Applies Kelvin and Fahrenheit conversion formulas, returns both in an array. O(1) time, O(1) space. |
 | 2710 | Remove Trailing Zeros From a String | Easy | [2710-Remove-trailing-zeros-from-a-string.java](./2710-Remove-trailing-zeros-from-a-string.java) | Scans from the end of the string, decrementing an index while trailing `'0'` characters are found, then returns the substring up to that point. Avoids parsing to a numeric type to prevent overflow on large inputs. O(n) time, O(1) extra space. |
 | 2798 | Number of Employees Who Met the Target | Easy | [2798-Number-of-Employees-Who-Met-the-Target.java](./2798-Number-of-Employees-Who-Met-the-Target.java) | TBD |
 | 2810 | Faulty Keyboard | Easy | [2810-Faulty-Keyboard.java](./2810-Faulty-Keyboard.java) | TBD |
 | 2828 | Check if String is a Prefix of Array | Easy | [2828-Check-if-String-is-an-Acronym.java](./2828-Check-if-String-is-an-Acronym.java) | Checks the string's length matches the word array's length, then compares each word's first character against the corresponding character in the string. O(n) time, O(1) space. |
+| 2942 | Find Words Containing Character | Easy | [2942-Find Words-Containing-Character.java](./2942-Find%20Words-Containing-Character.java) | TBD |
 | 3110 | Score of a String | Easy | [3110-Score-of-a-String.java](./3110-Score-of-a-String.java) | Iterates adjacent character pairs and sums the absolute difference of their ASCII values. O(n) time, O(1) space. |
 | 3300 | Minimum Element After Replacement With Digit Sum | Easy | [3300-Minimum-Element-After-Replacement-With-Digit-Sum.java](./3300-Minimum-Element-After-Replacement-With-Digit-Sum.java) | TBD |
 | 3340 | Check Balanced String | Easy | [3340-Check-Balanced-String.java](./3340-Check-Balanced-String.java) | Sums digits at even indices and digits at odd indices separately, then checks if the two sums are equal. O(n) time, O(1) space. |
@@ -56,8 +60,8 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 3925 | Concatenate Array With Reverse | Easy | [3925-Concat-Array-With-Reverse.java](./3925-Concat-Array-With-Reverse.java) | Builds a new array of length 2n: copies `nums` into the first half, and fills the second half with `nums` in reverse order using `ans[i+n] = nums[n-i-1]`. O(n) time, O(n) space. |
 
 ## Stats
-- **Total solved:** 44
-- **Easy:** 40 | **Medium:** 4 | **Hard:** 0
+- **Total solved:** 48
+- **Easy:** 41 | **Medium:** 7 | **Hard:** 0
 
 ## License
 This repository is for personal practice and reference. Feel free to browse for inspiration, but try solving problems yourself first!
