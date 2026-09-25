@@ -40,6 +40,7 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 1816 | Truncate Sentence | Easy | [1816-Truncate-Sentence.java](./1816-Truncate-Sentence.java) | Splits sentence by spaces, rebuilds first `k` words with a `StringBuilder`, then trims trailing whitespace. O(n) time, O(n) space. |
 | 1929 | Concatenation of Array | Easy | [1929-Concatenation-of-Array.java](./1929-Concatenation-of-Array.java) | Builds a new array of length 2n by copying `nums` into the first half and again into the second half (`ans[i] = ans[i+n] = nums[i]`). O(n) time, O(n) space. |
 | 2114 | Maximum Number of Words Found in Sentences | Easy | [2114-Maximum-Number-of-Words-Found-in-Sentences.java](./2114-Maximum-Number-of-Words-Found-in-Sentences.java) | Split each sentence by spaces, track max word count. O(n) time, O(n) space (O(1) extra space possible via manual space-counting). |
+| 2161 | Partition Array According to Given Pivot | Medium | [2161-Partition-Array-According-to-Given-Pivot.java](./2161-Partition-Array-According-to-Given-Pivot.java) | Three sequential passes over `nums`: collects elements `< pivot`, then every occurrence of `pivot` itself, then elements `> pivot`, preserving relative order within each group, then converts the combined `ArrayList` into the result array. O(n) time (three sequential, non-nested passes), O(n) space. |
 | 2185 | Counting Words With a Given Prefix | Easy | [2185-Counting-Words-With-a-Given-Prefix.java](./2185-Counting-Words-With-a-Given-Prefix.java) | TBD |
 | 2235 | Add Two Integers | Easy | [2235-Add-Two-Integers.java](./2235-Add-Two-Integers.java) | Simple sum of the two inputs. O(1) time, O(1) space. |
 | 2427 | Number of Common Factors | Easy | [2427-Number-Of-Common-Factors.java](./2427-Number-Of-Common-Factors.java) | Loops from 1 to `min(a, b)` inclusive, counting values that divide both. O(min(a,b)) time, O(1) space. |
@@ -57,11 +58,12 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 3492 | Maximum Containers on a Ship | Easy | [3492-Maximum-Containers-on-a-ship.java](./3492-Maximum-Containers-on-a-ship.java) | Answer is bounded by the smaller of total deck slots (`n²`) and weight capacity (`maxWeight / w`). Uses `long` arithmetic to avoid overflow on `n * n`. O(1) time, O(1) space. |
 | 3516 | Find Closest Person | Easy | [3516-Find-Closest-Person.java](./3516-Find-Closest-Person.java) | Compares absolute distances from the friend's position to each person and returns whichever is closer, or 0 if tied. O(1) time, O(1) space. |
 | 3701 | Compute Alternating Sum | Easy | [3701-Compute-Alternating-Sum.java](./3701-Compute-Alternating-Sum.java) | TBD |
+| 3875 | Construct Uniform Parity Array I | Easy | [3875-Construct-Uniform-Parity-Array-I.java](./3875-Construct-Uniform-Parity-Array-I.java) | TBD |
 | 3925 | Concatenate Array With Reverse | Easy | [3925-Concat-Array-With-Reverse.java](./3925-Concat-Array-With-Reverse.java) | Builds a new array of length 2n: copies `nums` into the first half, and fills the second half with `nums` in reverse order using `ans[i+n] = nums[n-i-1]`. O(n) time, O(n) space. |
 
 ## Stats
-- **Total solved:** 48
-- **Easy:** 41 | **Medium:** 7 | **Hard:** 0
+- **Total solved:** 50
+- **Easy:** 42 | **Medium:** 8 | **Hard:** 0
 
 ## License
 This repository is for personal practice and reference. Feel free to browse for inspiration, but try solving problems yourself first!
