@@ -49,6 +49,7 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 2710 | Remove Trailing Zeros From a String | Easy | [2710-Remove-trailing-zeros-from-a-string.java](./2710-Remove-trailing-zeros-from-a-string.java) | Scans from the end of the string, decrementing an index while trailing `'0'` characters are found, then returns the substring up to that point. Avoids parsing to a numeric type to prevent overflow on large inputs. O(n) time, O(1) extra space. |
 | 2798 | Number of Employees Who Met the Target | Easy | [2798-Number-of-Employees-Who-Met-the-Target.java](./2798-Number-of-Employees-Who-Met-the-Target.java) | TBD |
 | 2810 | Faulty Keyboard | Easy | [2810-Faulty-Keyboard.java](./2810-Faulty-Keyboard.java) | TBD |
+| 2824 | Count Pairs Whose Sum is Less than Target | Easy | [2824-Count-Pairs-Whose-Sum-is-Less-than-Target.java](./2824-Count-Pairs-Whose-Sum-is-Less-than-Target.java) | For each pair of indices `(i, j)` with `j` starting at `i+1` (so each pair is checked exactly once, no double-counting), increments a count if `nums[i] + nums[j] < target`. O(n²) time, O(1) extra space. An O(n log n) sort + two-pointer/binary-search approach is possible for larger constraints. |
 | 2828 | Check if String is a Prefix of Array | Easy | [2828-Check-if-String-is-an-Acronym.java](./2828-Check-if-String-is-an-Acronym.java) | Checks the string's length matches the word array's length, then compares each word's first character against the corresponding character in the string. O(n) time, O(1) space. |
 | 2942 | Find Words Containing Character | Easy | [2942-Find Words-Containing-Character.java](./2942-Find%20Words-Containing-Character.java) | TBD |
 | 3110 | Score of a String | Easy | [3110-Score-of-a-String.java](./3110-Score-of-a-String.java) | Iterates adjacent character pairs and sums the absolute difference of their ASCII values. O(n) time, O(1) space. |
@@ -59,11 +60,12 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 3516 | Find Closest Person | Easy | [3516-Find-Closest-Person.java](./3516-Find-Closest-Person.java) | Compares absolute distances from the friend's position to each person and returns whichever is closer, or 0 if tied. O(1) time, O(1) space. |
 | 3701 | Compute Alternating Sum | Easy | [3701-Compute-Alternating-Sum.java](./3701-Compute-Alternating-Sum.java) | TBD |
 | 3875 | Construct Uniform Parity Array I | Easy | [3875-Construct-Uniform-Parity-Array-I.java](./3875-Construct-Uniform-Parity-Array-I.java) | TBD |
+| 3895 | Count Digit Appearances | Medium | [3895-Count-Digit-Appearances.java](./3895-Count-Digit-Appearances.java) | Converts each number to a string and scans its characters, comparing each digit's numeric value to the target digit. O(n × d) time (d = digits per number), O(n × d) space for the string conversions; an O(1)-space modulo/division approach is also possible. |
 | 3925 | Concatenate Array With Reverse | Easy | [3925-Concat-Array-With-Reverse.java](./3925-Concat-Array-With-Reverse.java) | Builds a new array of length 2n: copies `nums` into the first half, and fills the second half with `nums` in reverse order using `ans[i+n] = nums[n-i-1]`. O(n) time, O(n) space. |
 
 ## Stats
-- **Total solved:** 50
-- **Easy:** 42 | **Medium:** 8 | **Hard:** 0
+- **Total solved:** 52
+- **Easy:** 43 | **Medium:** 9 | **Hard:** 0
 
 ## License
 This repository is for personal practice and reference. Feel free to browse for inspiration, but try solving problems yourself first!
