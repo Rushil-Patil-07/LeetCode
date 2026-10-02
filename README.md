@@ -16,6 +16,8 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 9 | Palindrome Number | Easy | [0009-Palindrome-Number.java](./0009-Palindrome-Number.java) | Reverses the number by extracting digits and compares to original. Negative numbers return false. O(log n) time, O(1) space. |
 | 26 | Remove Duplicates from Sorted Array | Easy | [0026-Remove-Duplicates-from-Sorted-Array.java](./0026-Remove-Duplicates-from-Sorted-Array.java) | Builds a list of unique values in a single pass, comparing each element to the next, then copies the unique values back into `nums` (only the first `k` elements need to be correct, per LeetCode's checker). O(n) time, O(n) extra space (ArrayList). A tighter O(1)-extra-space two-pointer approach is also possible. |
 | 27 | Remove Element | Easy | [0027-Remove-Element.java](./0027-Remove-Element.java) | TBD |
+| 34 | Find First and Last Position of Element in Sorted Array | Medium | [0034-Find First-and-Last-Position-of-Element-in-Sorted-Array.java](./0034-Find%20First-and-Last-Position-of-Element-in-Sorted-Array.java) | TBD |
+| 35 | Search Insert Position | Easy | [0035-Search-Insert-Position.java](./0035-Search-Insert-Position.java) | TBD |
 | 66 | Plus One | Easy | [0066-Plus-One.java](./0066-Plus-One.java) | Adds one to the last digit and propagates the carry leftward through the array; if a carry remains after the leftmost digit, allocates a new array of size n+1 with a leading 1. O(n) time, O(n) space (output array). |
 | 151 | Reverse Words in a String | Medium | [0151-Reverse-Words-in-a-Sring.java](./0151-Reverse-Words-in-a-Sring.java) | Trims leading/trailing spaces, splits on `\s+` (one or more whitespace) to collapse internal multiple spaces, then reverses the word array with a two-pointer swap and rejoins with `String.join`. O(n) time, O(n) space. |
 | 167 | Two Sum II - Input Array Is Sorted | Medium | [0167-Two-Sum-II.java](./0167-Two-Sum-II.java) | Two-pointer approach: pointers start at both ends and move inward based on comparing the running sum to target. Returns 1-indexed positions. O(n) time, O(1) space. |
@@ -28,6 +30,7 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 412 | Fizz Buzz | Easy | [0412-Fizz-Buzz.java](./0412-Fizz-Buzz.java) | Iterates 1 to n, checking divisibility by 15, 3, and 5 in order to build the output list ("FizzBuzz", "Fizz", "Buzz", or the number as a string). O(n) time, O(n) space (output list). |
 | 520 | Detect Capital | Easy | [0520-Detect-Capital.java](./0520-Detect-Capital.java) | TBD |
 | 709 | To Lower Case | Easy | [0709-to-lower-case.java](./0709-to-lower-case.java) | Uses built-in `toLowerCase()`. O(n) time, O(n) space. |
+| 744 | Find Smallest Letter Greater Than Target | Easy | [0744-Find-Smallest-Letter-Greater-Than-Target.java](./0744-Find-Smallest-Letter-Greater-Than-Target.java) | TBD |
 | 771 | Jewels and Stones | Easy | [0771-Jewals-and-Stones.java](./0771-Jewals-and-Stones.java) | Nested loop checks each jewel character against each stone character. O(n×m) time, O(1) space. Faster O(n+m) possible using a HashSet. |
 | 896 | Monotonic Array | Easy | [0896-Monotonic-Array.java](./0896-Monotonic-Array.java) | Single pass tracking two flags (`isIncreasing`, `isDecreasing`); returns true if either stays true through the whole array. O(n) time, O(1) space. |
 | 1281 | Subtract the Product and Sum of Digits of an Integer | Easy | [1281-subtract-product-and-sum-of-digits.java](./1281-subtract-product-and-sum-of-digits.java) | Extracts digits one at a time, tracking running product and sum, then returns the difference. O(log n) time, O(1) space. |
@@ -65,8 +68,8 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 3925 | Concatenate Array With Reverse | Easy | [3925-Concat-Array-With-Reverse.java](./3925-Concat-Array-With-Reverse.java) | Builds a new array of length 2n: copies `nums` into the first half, and fills the second half with `nums` in reverse order using `ans[i+n] = nums[n-i-1]`. O(n) time, O(n) space. |
 
 ## Stats
-- **Total solved:** 53
-- **Easy:** 43 | **Medium:** 9 | **Hard:** 1
+- **Total solved:** 56
+- **Easy:** 45 | **Medium:** 10 | **Hard:** 1
 
 ## License
 This repository is for personal practice and reference. Feel free to browse for inspiration, but try solving problems yourself first!
