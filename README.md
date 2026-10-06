@@ -31,6 +31,7 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 344 | Reverse String | Easy | [0344-Reverse-String.java](./0344-Reverse-String.java) | TBD |
 | 412 | Fizz Buzz | Easy | [0412-Fizz-Buzz.java](./0412-Fizz-Buzz.java) | Iterates 1 to n, checking divisibility by 15, 3, and 5 in order to build the output list ("FizzBuzz", "Fizz", "Buzz", or the number as a string). O(n) time, O(n) space (output list). |
 | 520 | Detect Capital | Easy | [0520-Detect-Capital.java](./0520-Detect-Capital.java) | TBD |
+| 557 | Reverse Words in a String III | Easy | [0557-Reverse-Words-in-a-String-III.java](./0557-Reverse-Words-in-a-String-III.java) | Splits on single spaces, reverses each word with a `StringBuilder`, and joins the words back with a single space between them (no trailing space). O(n) time, O(n) space. |
 | 709 | To Lower Case | Easy | [0709-to-lower-case.java](./0709-to-lower-case.java) | Uses built-in `toLowerCase()`. O(n) time, O(n) space. |
 | 744 | Find Smallest Letter Greater Than Target | Easy | [0744-Find-Smallest-Letter-Greater-Than-Target.java](./0744-Find-Smallest-Letter-Greater-Than-Target.java) | TBD |
 | 771 | Jewels and Stones | Easy | [0771-Jewals-and-Stones.java](./0771-Jewals-and-Stones.java) | Nested loop checks each jewel character against each stone character. O(n×m) time, O(1) space. Faster O(n+m) possible using a HashSet. |
@@ -54,6 +55,7 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 2427 | Number of Common Factors | Easy | [2427-Number-Of-Common-Factors.java](./2427-Number-Of-Common-Factors.java) | Loops from 1 to `min(a, b)` inclusive, counting values that divide both. O(min(a,b)) time, O(1) space. |
 | 2433 | Find The Original Array of Prefix Xor | Medium | [2433-Find-The-Original-Array-of-Prefix-Xor.java](./2433-Find-The-Original-Array-of-Prefix-Xor.java) | Recovers the original array from a prefix-XOR array: the first element equals `pref[0]`, and each subsequent element is `pref[i] ^ pref[i-1]` (XORing with the prior prefix cancels out everything but the new term). O(n) time, O(n) space. |
 | 2469 | Convert the Temperature | Easy | [2469-Convert-the-Tempreture.java](./2469-Convert-the-Tempreture.java) | Applies Kelvin and Fahrenheit conversion formulas, returns both in an array. O(1) time, O(1) space. |
+| 2545 | Sort the Students by Their Kth Score | Medium | [2545-Sort-the-Students-by-Their-Kth-Score.java](./2545-Sort-the-Students-by-Their-Kth-Score.java) | TBD |
 | 2710 | Remove Trailing Zeros From a String | Easy | [2710-Remove-trailing-zeros-from-a-string.java](./2710-Remove-trailing-zeros-from-a-string.java) | Scans from the end of the string, decrementing an index while trailing `'0'` characters are found, then returns the substring up to that point. Avoids parsing to a numeric type to prevent overflow on large inputs. O(n) time, O(1) extra space. |
 | 2798 | Number of Employees Who Met the Target | Easy | [2798-Number-of-Employees-Who-Met-the-Target.java](./2798-Number-of-Employees-Who-Met-the-Target.java) | TBD |
 | 2810 | Faulty Keyboard | Easy | [2810-Faulty-Keyboard.java](./2810-Faulty-Keyboard.java) | TBD |
@@ -72,8 +74,8 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 3925 | Concatenate Array With Reverse | Easy | [3925-Concat-Array-With-Reverse.java](./3925-Concat-Array-With-Reverse.java) | Builds a new array of length 2n: copies `nums` into the first half, and fills the second half with `nums` in reverse order using `ans[i+n] = nums[n-i-1]`. O(n) time, O(n) space. |
 
 ## Stats
-- **Total solved:** 60
-- **Easy:** 45 | **Medium:** 13 | **Hard:** 2
+- **Total solved:** 62
+- **Easy:** 46 | **Medium:** 14 | **Hard:** 2
 
 ## License
 This repository is for personal practice and reference. Feel free to browse for inspiration, but try solving problems yourself first!
