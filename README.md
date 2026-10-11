@@ -20,7 +20,9 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 34 | Find First and Last Position of Element in Sorted Array | Medium | [0034-Find First-and-Last-Position-of-Element-in-Sorted-Array.java](./0034-Find%20First-and-Last-Position-of-Element-in-Sorted-Array.java) | TBD |
 | 35 | Search Insert Position | Easy | [0035-Search-Insert-Position.java](./0035-Search-Insert-Position.java) | TBD |
 | 66 | Plus One | Easy | [0066-Plus-One.java](./0066-Plus-One.java) | Adds one to the last digit and propagates the carry leftward through the array; if a carry remains after the leftmost digit, allocates a new array of size n+1 with a leading 1. O(n) time, O(n) space (output array). |
+| 75 | Sort Colors | Medium | [0075-Sort-Colors.java](./0075-Sort-Colors.java) | TBD |
 | 151 | Reverse Words in a String | Medium | [0151-Reverse-Words-in-a-Sring.java](./0151-Reverse-Words-in-a-Sring.java) | Trims leading/trailing spaces, splits on `\s+` (one or more whitespace) to collapse internal multiple spaces, then reverses the word array with a two-pointer swap and rejoins with `String.join`. O(n) time, O(n) space. |
+| 153 | Find Minimum in Rotated Sorted Array | Medium | [0153-Find-Minimum-in-Rotated-Sorted-Array.java](./0153-Find-Minimum-in-Rotated-Sorted-Array.java) | Binary search comparing `nums[mid]` with `nums[end]`: if `nums[mid] < nums[end]` the minimum is at `mid` or to its left (`end = mid`), otherwise it lies strictly right of `mid` (`start = mid + 1`). The loop ends with `start == end` on the minimum. Relies on unique elements (duplicates need LC 154's `end--` case). O(log n) time, O(1) space. |
 | 162 | Find Peak Element | Medium | [0162-Find-Peak-Element.java](./0162-Find-Peak-Element.java) | TBD |
 | 167 | Two Sum II - Input Array Is Sorted | Medium | [0167-Two-Sum-II.java](./0167-Two-Sum-II.java) | Two-pointer approach: pointers start at both ends and move inward based on comparing the running sum to target. Returns 1-indexed positions. O(n) time, O(1) space. |
 | 204 | Count Primes | Medium | [0204-Count-Primes.java](./0204-Count-Primes.java) | For each candidate `i` from 2 to n-1, tests divisibility by every `j` up to `√i`, breaking early on the first divisor found and incrementing a count when none divide evenly. O(n√n) time, O(1) extra space. Sieve of Eratosthenes (O(n log log n)) is faster for the largest constraints. |
@@ -32,6 +34,7 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 412 | Fizz Buzz | Easy | [0412-Fizz-Buzz.java](./0412-Fizz-Buzz.java) | Iterates 1 to n, checking divisibility by 15, 3, and 5 in order to build the output list ("FizzBuzz", "Fizz", "Buzz", or the number as a string). O(n) time, O(n) space (output list). |
 | 520 | Detect Capital | Easy | [0520-Detect-Capital.java](./0520-Detect-Capital.java) | TBD |
 | 557 | Reverse Words in a String III | Easy | [0557-Reverse-Words-in-a-String-III.java](./0557-Reverse-Words-in-a-String-III.java) | Splits on single spaces, reverses each word with a `StringBuilder`, and joins the words back with a single space between them (no trailing space). O(n) time, O(n) space. |
+| 704 | Binary Search | Easy | [0704-Binary-Search.java](./0704-Binary-Search.java) | Classic binary search with inclusive bounds (`start <= end`): returns `mid` on a match, otherwise discards the half that can't contain the target via `end = mid - 1` or `start = mid + 1`. Returns -1 when the range becomes empty. O(log n) time, O(1) space. |
 | 709 | To Lower Case | Easy | [0709-to-lower-case.java](./0709-to-lower-case.java) | Uses built-in `toLowerCase()`. O(n) time, O(n) space. |
 | 744 | Find Smallest Letter Greater Than Target | Easy | [0744-Find-Smallest-Letter-Greater-Than-Target.java](./0744-Find-Smallest-Letter-Greater-Than-Target.java) | TBD |
 | 771 | Jewels and Stones | Easy | [0771-Jewals-and-Stones.java](./0771-Jewals-and-Stones.java) | Nested loop checks each jewel character against each stone character. O(n×m) time, O(1) space. Faster O(n+m) possible using a HashSet. |
@@ -74,8 +77,8 @@ My Java solutions to LeetCode problems, solved as part of my ongoing DSA practic
 | 3925 | Concatenate Array With Reverse | Easy | [3925-Concat-Array-With-Reverse.java](./3925-Concat-Array-With-Reverse.java) | Builds a new array of length 2n: copies `nums` into the first half, and fills the second half with `nums` in reverse order using `ans[i+n] = nums[n-i-1]`. O(n) time, O(n) space. |
 
 ## Stats
-- **Total solved:** 62
-- **Easy:** 46 | **Medium:** 14 | **Hard:** 2
+- **Total solved:** 65
+- **Easy:** 47 | **Medium:** 16 | **Hard:** 2
 
 ## License
 This repository is for personal practice and reference. Feel free to browse for inspiration, but try solving problems yourself first!
